@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8"> 
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Form Validation</title>
+   <meta name="Description" content="Checking name">
+   <script>function required()
+    {
+    
+    var empty = document.forms["form1"]["name"].value && document.forms["form1"]["Email"].value && document.forms["form1"]["country"].value;
+    
+    if ( ! empty )
+    {
+    alert("Please fill out all the boxes");
+    return false;
+    }
+    else 
+    {
+    alert('Code has accepted : you can try another');
+    return true; 
+    }
+    }</script>
+</head>
+
+    <body>
+<form name="form1" action="#" onsubmit="required(); return false;">
+        Name:
+        <input type="text" name="name">
+        
+        
+        Email:
+        <input type="text" name="Email">
+        
+         Location
+         <select id="country" name="country">
+           <option value=""></option>
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+            <option value="indoasia">Indoasia</option>
+            <option value="japan">japan</option>
+            </select>
+            <br>
+            <br>
+            <textarea rows="9" cols="125"></textarea>
+            <br>
+       <input type="submit" value="Submit">
+          </form></body>
+    </html>
